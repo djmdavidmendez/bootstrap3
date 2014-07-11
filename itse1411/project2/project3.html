@@ -55,7 +55,7 @@
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Menu<strong class="caret"></strong></a>
                                 <ul class="dropdown-menu">
                                     <li><a href="#">Breakfast Menu</a></li>
-                                    <li><a href="#">Lunch Specials</a></li>
+                                    <li><a href="lunch_menu.html">Lunch Specials</a></li>
                                     <li><a href="#">Dinner Menu</a></li>
                                     <li class="divider"></li>
                                     <li class="dropdown-header">More Services</li>
@@ -63,6 +63,7 @@
                                     <li><a href="#">Postres</a></li>
                                     <li><a href="#">Bar Menu & Beverages</a></li>
                                     <li><a href="happy_hour_menu.html" onclick="showHappyHour('happy_hour_menu.html'); return false">Happy Hour Specials</a></li>
+                                    <li></li>
 
                                 </ul> <!--dropdown-menu-->
                             </li>
@@ -72,85 +73,108 @@
                 </div> <!--constainer-->
             </div> <!-- navbar -->
 
-            <div class="row" id="menuHeading">
-                <div class="col-12">
-                    <br><br><br>
-                    <h4>Lunch Menu</h4>
-                    <p>Served Tues-Friday<br>11am-2pm All Lunch Specials are served with Chips, Salsa, Iced Tea and a Praline</p>
-                </div>
-            </div> <!-- featuresHeading -->
+            <!-- bootstrap classes that give you a carousel style and have it slide -->
+            <div class="carousel slide" id="myCarousel">
 
-            <script type="text/javascript">
-                /* <![CDATA[ */
-                var itemArray = ["#1. Carne Guisada Plate",
-                                 "#2 Beef or Chicken Fajita Taco",
-                                 "#3 Enchilada Plate",
-                                 "#4 Veggie Enchilada Plate",
-                                 "#5 Tortilla Soup & Taco",
-                                 "#6 Enchilada Suiza,",
-                                 "#7 Bean & Cheese Chalupa",
-                                 "#8 Pollo Plate",
-                                 "#9 Bowl Tortilla Soup",
-                                 "#10 Chicken Mole Enchilada Plate",
-                                 "#11 Taco Salad",
-                                 "#12 Combo Plate"];
-                var descArray = ["Beef tips with gravy servied with rice and beans",
-                    "Topped with lettuce, tomato and cheese. Served with charro beans and Spanish rice",
-                    "Choice of (2) beef, chicken or cheese enchiladas with rice & beans",
-                    "Choice of spinach, mushroom or cheese enchilada topped with our special verde sauce. Served with guacoamole salad and vegetarian black beans.",
-                    "Beef or chicken fajita taco with lettuce, tomato and cheese.  Served with cup of tortilla soup.",
-                    "Chicken enchiladas (2) covered with our sour cream sauce and Monterrey Jack cheese. Served with rice and beans.",
-                    "Bean and cheese chalupa, guacamole salad and chile con queso.",
-                    "Chicken tenders sauteed with onions and bell peppers, served with steamed vegetables, rice and topped with queso.",
-                    "Hand pulled chicken, avocado, rice, tomato and topped with Monterrey Jack cheese and crisp tortilla strips.",
-                    "Chicken enchiladas (2) covered in mole sauce and served with charro beans and rice.",
-                    "Seasoned ground beef or hand pulled chicken served in a crispy tortilla shell with lettuce, tomato and cheese.",
-                    "One cheese or beef enchilada, one crispy beef taco, rice and beans."];
-                var priceArray = ["7.75","6.95","6.95","7.50","6.95","7.50","6.95","7.50","6.95","7.95","6.95","7.95"];
+                <!-- Indicators -->
+                <ol class="carousel-indicators">
+                    <li class="active" data-slide-to="0" data-target="#myCarousel"></li>
+                    <li data-slide-to="1" data-target="#myCarousel"></li>
+                    <li data-slide-to="2" data-target="#myCarousel"></li>
+                </ol>
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner">
+                    <div class="item active" id="slide1">
+                        <div class="carousel-caption">
+                            <h4>Shrimp tacos</h4>
+                        </div><!-- end carousel-caption-->
+                    </div><!-- end item -->
 
-                document.write('<table id="schedule"> ');
-                for (var i = 0; i < itemArray.length; i++) {
-                    document.write('<tr>');
-                    document.write('<td>'+ itemArray[i] + '</td>');
-                    document.write('<td>'+ descArray[i] + '</td>');
-                    document.write('<td>'+ '$'+ priceArray[i] + '</td>');
+                    <div class="item" id="slide2">
+                        <div class="carousel-caption">
+                            <h4>Beef Enchiladas</h4>
+                        </div><!-- end carousel-caption-->
+                    </div><!-- end item -->
 
-                    document.write('</tr>');
-                }
+                    <div class="item" id="slide3">
+                        <div class="carousel-caption">
+                            <h4>Caldo</h4>
+                        </div><!-- end carousel-caption-->
+                    </div><!-- end item -->
+                </div><!-- carousel-inner -->
 
+                <!-- Controls -->
+                <a class="left carousel-control" data-slide="prev" href="#myCarousel"><span class="icon-prev"></span></a>
+                <a class="right carousel-control" data-slide="next" href="#myCarousel"><span class="icon-next"></span></a>
 
-                document.write('</table>');
-                document.write('<br>');
+            </div><!-- end myCarousel -->
 
-                /* ]]> */
-            </script>
+            <div class="well">
+                <div class="page-header">
+                    <p class="lead">&nbsp;Rico Suave serves great food and drinks to the people of Austin Texas!<br>
+                    Come in and try our authentic mexican food, bar drinks, and great mariachi music!</p>
+                    <div class="col-sm-5"></div>
+                    <a href="happy_hour_menu.html" class="btn-default btn-large btn-warning" style="background-color: red"
+                            onclick="showHappyHour('happy_hour_menu.html'); return false">Happy Hour Specials!</a>
+                    <div class="col-sm-5"></div>
+                    <p class="lead" style="margin-bottom: 0"><br>Tuesday-Thursday 5-7PM<br>&nbsp;&nbsp;Fridays 9PM-11PM</p>
+                </div><!-- end page-header -->
+            </div><!-- end well -->
 
             <div class="row" id="features">
                 <div class="col-sm-4 feature">
-                    <div class="panel" id="panel4">
+                    <div class="panel" id="panel1">
                         <div class="panel-heading">
-                            <h3 class="panel-title">#1 Carne Guisada Plate<br><small>$7.75</small></h3>
+                            <h3 class="panel-title">Breakfast<br><small>8:00 am - 11:00 am</small></h3>
                         </div><!--panel-heading-->
+                        <br><br><br><br><br><br><br><br><br><br><br>
+                        <a href="#" target="_blank" class="btn btn-warning btn-block">Breakfast Menu</a>
                     </div><!--panel-->
                 </div><!--feature-->
 
                 <div class="col-sm-4 feature">
-                    <div class="panel" id="panel5">
+                    <div class="panel" id="panel2">
                         <div class="panel-heading">
-                            <h3 class="panel-title">#7 Bean and Cheese Chalupa<br><small>$6.95</small></h3>
+                            <h3 class="panel-title">Lunch Specials<br><small>Served tues-Friday 11 am - 2 pm</small></h3>
                         </div><!--panel-heading-->
+                        <br><br><br><br><br><br><br><br><br><br><br>
+                        <a href="lunch_menu.html" target="_blank" class="btn btn-success btn-block">Lunch Specials</a>
                     </div><!--panel-->
                 </div><!--feature-->
 
                 <div class="col-sm-4 feature">
-                    <div class="panel" id="panel6">
+                    <div class="panel" id="panel3">
                         <div class="panel-heading">
-                            <h3 class="panel-title">#10 Chicken Mole Enchilada Plate<br><small>$7.95</small></h3>
+                            <h3 class="panel-title">Dinner<br><small>Substitutions are subject to additional charges</small></h3>
                         </div><!--panel-heading-->
+                        <br><br><br><br><br><br><br><br><br><br><br>
+                        <a href="#" target="_blank" class="btn btn-info btn-block">Dinner Menu</a>
                     </div><!--panel-->
                 </div><!--feature-->
 
             </div> <!-- features -->
+
+            <div class="row" id="moreInfo">
+                <div class="col-sm-3">
+                </div>
+                <div class="col-sm-6">
+                    <div class="tabbable">
+                        <ul class="nav nav-tabs">
+                            <li class="active"><a href="#tab1" data-toggle="tab">Location</a> </li>
+                        </ul>
+                        <div class="tab-content">
+                            <div class="tab-pane active" id="tab1">
+                                <h4><span></span>Our Location<small>&nbsp;is right on SoCo</small></h4>
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3447.134772184985!2d-97.758653!3d30.233233!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8644b4eb9282ed59%3A0xb727cce3a041b384!2s2910+S+Congress+Ave!5e0!3m2!1sen!2sus!4v1403601115192" width="100%" height="200" style="border:0"></iframe>
+                                <p>El Rico Suave makes sure only the highest quality ingredients go into each dish.  We continue to make everything from scratch.  Classic Austin Tex-Mex and Mexican Specialities are prepared daily in our kitchen by chefs who have been with our family for over 25 years. We hope our homemade food, family atmosphere and professional staff make your visit each and every time a wonderful experience.</p>
+                                <p>Austin has grown over the past 55 years to an incredibly busy and vibrant city.  It has been our pleasure to serve fellow Austinites, for all these years.  We are incredibly proud that our customers consider themselves a part of the El Rico Suave family and that they agree that El Rico Suave Serves Austin Best Tex-Mex!</p>
+                            </div><!--tab-pane-->
+                        </div><!--tab-content-->
+                    </div><!--tabbable-->
+                </div><!--col-sm-6-->
+                <div class="col-sm-3">
+                </div>
+            </div> <!-- moreInfo -->
 
             <hr>
             <div class="row" id="moreCourses">
@@ -168,12 +192,12 @@
                         <table>
                             <tr>
                                 <td>
-                                    <a href="http://validator.w3.org/check/referer">Conformance<br>Checker</a><br>
+                                    <a href="http://validator.w3.org/check/referer">Conformance<br>Checker</a><br />
                                     <a href="http://validator.w3.org/checklink">Link Checker</a>
                                 </td>
                                 <td>
                                     <a href="http://jigsaw.w3.org/css-validator/check/referer">
-                                        <img src="http://www.austincc.edu/jscholl/images/vcss.png" alt="Valid CSS!" height="31" width="88" style="border: 0">
+                                    <img src="http://www.austincc.edu/jscholl/images/vcss.png" alt="Valid CSS!" height="31" width="88" style="border: 0">
                                     </a>
                                 </td>
                             </tr>
@@ -189,7 +213,7 @@
                         <h6>Navigation</h6>
                         <ul class="notstyled">
                             <li><a href="#">Breakfast Menu</a></li>
-                            <li><a href="#">Lunch Specials</a></li>
+                            <li><a href="lunch_menu.html">Lunch Specials</a></li>
                             <li><a href="#">Dinner Menu</a></li>
                             <li><a href="#">American Dishes</a></li>
                             <li><a href="#">Postres</a></li>
@@ -201,24 +225,9 @@
                     <div class="col-sm-2">
                         <h6>Follow Us</h6>
                         <ul class="notstyled">
-                            <li>
-                                <a href="#" target="_blank">
-                                    <img src="images/twittericon.png" alt="">
-                                    Twitter
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" target="_blank">
-                                    <img src="images/facebookicon.png" alt="">
-                                    Facebook
-                                </a>
-                            </li>
-                            <li>
-                                <a href="#" target="_blank">
-                                    <img src="images/instagramicon.png" alt="">
-                                    Instagram
-                                </a>
-                            </li>
+                            <li><a href="#" target="_blank"><img src="images/twittericon.png" alt=""> Twitter</a></li>
+                            <li><a href="#" target="_blank"><img src="images/facebookicon.png" alt="">Facebook</a></li>
+                            <li><a href="#" target="_blank"><img src="images/instagramicon.png" alt="">Instagram</a></li>
                         </ul>
                     </div> <!--col-sm-2-->
 
@@ -230,7 +239,7 @@
         </footer>
         <!-- All Javascript at the bottom of the page for faster page loading -->
 
-        <!-- First try for the online version of jQuery-->
+        <!-- First try for the online version of jQuery -->
         <script src="http://code.jquery.com/jquery.js"></script>
 
         <!-- If no online access, fallback to our hardcoded version of jQuery -->
